@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="favicon" width="48" height="48"></canvas>
+<canvas id="icon" width="1024" height="1024"></canvas>
+<canvas id="splash" width="1242" height="2436"></canvas>
+<canvas id="adaptive" width="1024" height="1024"></canvas>
+<script>
+function createImage(id, color) {
+    const canvas = document.getElementById(id);
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = color;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL();
+}
+
+console.log('favicon:', createImage('favicon', '#000000'));
+console.log('icon:', createImage('icon', '#000000'));
+console.log('splash:', createImage('splash', '#ffffff'));
+console.log('adaptive:', createImage('adaptive', '#000000'));
+</script>
+</body>
+</html>
